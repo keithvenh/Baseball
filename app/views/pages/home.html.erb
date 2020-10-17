@@ -1,0 +1,16 @@
+<h1>Sultan of Stat</h1>
+<p>A statistically accurate baseball game with real players, real statistics and real fun!</p>
+
+<h2>Welcome, <%= @user.username %></h2>
+<ul>
+    <li><%= link_to "Account", edit_user_registration_path(@user) %></li>
+    <li><%= link_to "Leagues" %></li>
+    <li><%= link_to "Tournaments" %></li>
+    <li><%= link_to "Teams" %></li>
+    <li><%= link_to "Players" %></li>
+    <li><%= link_to "Store" %></li>
+</ul>
+
+<% player = get_player_info %>
+<%= pid = player['search_player_all']['queryResults']['row']['player_id'] %>
+<%= get_player_data(pid) %>
