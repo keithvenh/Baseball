@@ -10,8 +10,8 @@ module PagesHelper
         return JSON.parse(res.body)
     end
 
-    def get_player_info
-        url = URI.parse("http://lookup-service-prod.mlb.com/json/named.search_player_all.bam?sport_code='mlb'&active_sw='N'&name_part='babe ruth'")
+    def get_player_info(search)
+        url = URI.parse("http://lookup-service-prod.mlb.com/json/named.search_player_all.bam?sport_code='mlb'&active_sw='N'&name_part='#{search}'")
         req = Net::HTTP::Get.new(url.to_s)
         res = Net::HTTP.start(url.host, url.port) {|http|
         http.request(req)

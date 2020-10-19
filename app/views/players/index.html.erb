@@ -1,0 +1,10 @@
+<h1>All Players</h1>
+
+<%= @user.username %>
+
+<ul>
+<% @players.each do |p| %>
+    <% @user_players.find_by(player_id: p.id) ? user_owned = true : user_owned = false %>
+    <li><%= p.lname + ", " + p.fname %><%= user_owned ? '*' : '' %></li>
+<% end %>
+</ul>

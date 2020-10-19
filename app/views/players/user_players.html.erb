@@ -1,0 +1,9 @@
+<h1>My Players</h1>
+
+<%= @user.username %>
+<ul>
+<% @user_players.each do |p| %>
+    <% player = Player.find(p.player_id) %>
+    <li><%= player.lname + ", " + player.fname %></li>
+<% end %>
+</ul>
