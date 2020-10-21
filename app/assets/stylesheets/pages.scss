@@ -1,9 +1,69 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
-.owned {
-    font-weight: bold;
+.header {
+    height: 60px;
+    width: 100vw;
+    background-color: #efefef;
+    display: flex;
+    position: fixed;
+    box-shadow: 0 3px -3px #dbdbdb;
+    justify-content: space-between;
+    max-width: 100%;
 }
-.unowned {
-    color: #777;
+
+.logo {
+    font-size: 24px;
+    line-height: 60px;
+    margin: 0;
+    padding: 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    &:hover {
+        background-color: #1345ad;
+        color: #efefef;
+    }
+}
+
+.container {
+    padding-top: 60px;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    line-height: 60px;
+    margin: 0;
+    font-size: 16px;
+}
+
+.user-account {
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    p {
+        line-height: 60px;
+        padding: 0 20px;
+    }
+    &:hover {
+        background-color: #1345ad;
+        color: #efefef;
+        cursor: pointer;
+        .user-options {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.user-options {
+    width: 100%;
+    background-color: #1345ad;
+    display: none;
+    text-align: center;
+    a {
+        color: #efefef;
+        padding: 6px 0;
+    }
+    a:hover {
+        background-color:  rgba(20,50,80,0.3);
+        color: #efefef;
+    }
 }

@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+
+ html {
+     margin: 0;
+     padding: 0;
+ }
+ 
+ body {
+     font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
+     font-size: 16px;
+     font-weight: 300;
+     color: #333;
+     padding: 0;
+     margin: 0;
+     background-color: #efefef;
+ }
+
+ .title {
+     font-weight: 700;
+     letter-spacing: 2px;
+     text-align: center;
+     text-transform: uppercase;
+     margin: 0;
+ }
+
+ a {
+     color: #333;
+     text-decoration: none;
+ }
+
+ a:hover {
+     color: #1345ad;
+ }
+ div, article, section {
+     box-sizing: border-box;
+     padding: 0;
+     marging: 0;
+ }

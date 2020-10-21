@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_19_024036) do
+ActiveRecord::Schema.define(version: 2020_10_19_180227) do
 
   create_table "divisions", force: :cascade do |t|
     t.string "title"
@@ -36,6 +36,9 @@ ActiveRecord::Schema.define(version: 2020_10_19_024036) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "mlb_api_pid"
+    t.string "retrosheet_pid"
+    t.index ["mlb_api_pid"], name: "index_players_on_mlb_api_pid", unique: true
+    t.index ["retrosheet_pid"], name: "index_players_on_retrosheet_pid", unique: true
   end
 
   create_table "season_batting_stats", force: :cascade do |t|

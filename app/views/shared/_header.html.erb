@@ -1,0 +1,19 @@
+<header class="header">
+    <%= link_to root_url do %>
+        <h1 class="logo header-logo">Sultan of Stat</h1>
+    <% end %>
+
+<% if user_signed_in? %>
+    <div class="user-account">
+        <p class="user-account"><i class="fas fa-user"></i> <%= @user.username %></p>
+        <div class="user-options">
+            <%= link_to edit_user_registration_path do %>
+                <i class="fas fa-user-cog"></i> Settings
+            <% end %>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+                <i class="fas fa-sign-out-alt"></i> Logout
+            <% end %>
+        </div>
+    </div>
+<% end %>
+</header>
